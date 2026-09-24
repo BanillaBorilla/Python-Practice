@@ -1,0 +1,5 @@
+rate = float(input("Annual rate (as a decimal) "))
+years = int(input("Number of years: "))
+future_value = float(input("Target value: "))
+principal = future_value / ((1 + rate) ** years)
+print("Principal: ", principal)
