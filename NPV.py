@@ -1,17 +1,18 @@
 def npv(rate, cash_flows):
     total = 0
-    for year in range (len(cash_flows)):
-        total = total + cash_flows[year] / (1 +rate) ** year
+    for year in range(len(cash_flows)):
+        total = total + cash_flows[year] / (1 + rate) ** year
     return total
 
-cash_flows = [-10000, 3000, 4000, 5000, 6000]
-print("NPV at 10%:", round(npv(0.10, cash_flows), 2))
+projects = {
+    "Alpha": [-10000, 3000, 4000, 5000, 6000],
+    "Beta":  [-8000, 2000, 3000, 4000, 5000],
+    "Gamma": [-12000, 5000, 5000, 5000, 5000],
+    "Delta": [-10000, 5000,5000, 5000, 5000],
+}
 
-result = npv(0.10, cash_flows)
+for name in projects:
+    value = npv(0.10, projects[name])
+    print(name, "NPV:", round(value, 2))
 
-if result > 5000: 
-    print("Decision: STRONG BUY - NPV is positive")
-elif result > 0: 
-    print("Decision: INVEST - NPV is positive")
-else:
-    print("Decision: WALK AWAY - NPV is negative")
+
