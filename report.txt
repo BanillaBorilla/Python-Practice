@@ -1,6 +1,6 @@
 REVENUE REPORT
-Total revenue: 189600.0
-Average monthly: 15800.0
-Best month: Jul (20000.0)
-Worst month: Apr (10000.0)
+Total revenue: $189,600.00
+Average monthly: $15,800.00
+Best month: Jul $20,000.00
+Worst month: Apr $10,000.00
 Report Produced by BanillaBorilla

@@ -23,10 +23,10 @@ with open("revenue.csv") as file:
 
 with open("report.txt", "w") as report:
           report.write("REVENUE REPORT\n")
-          report.write("Total revenue: " + str(total)+ "\n")
-          report.write("Average monthly: " + str(round(total / count, 2)) + "\n")
-          report.write("Best month: " + best_month + " (" + str(best_revenue) + ")\n")
-          report.write("Worst month: " + worst_month + " (" + str(worst_revenue) + ")\n")
+          report.write(f"Total revenue: ${total:,.2f}" + "\n")
+          report.write(f"Average monthly: ${(round(total / count, 2)):,.2f}" + "\n")
+          report.write(f"Best month: {best_month} ${best_revenue:,.2F}" + "\n")
+          report.write(f"Worst month: {worst_month} ${worst_revenue:,.2F}" + "\n")
           report.write("Report Produced by BanillaBorilla" "\n")
 
 print("Report written to report.txt")
